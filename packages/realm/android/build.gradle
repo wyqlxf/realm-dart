@@ -81,27 +81,6 @@ def getPaths() {
     return [flutterRoot, dartExecutable]
 }
 
-tasks.register("runMetrics", Exec) {
-    outputs.upToDateWhen { false }
-
-    try {
-        def appProject = project.rootProject.subprojects.find { p -> p.name == 'app' }
-        def (flutterRoot, dartExecutable) = getPaths()
-
-        workingDir "${project.rootProject.projectDir}${File.separator}.."
-
-        String targetOsVersion
-        if (appProject != null) {
-            def conf = appProject.android.defaultConfig
-            targetOsVersion = "API Level ${conf.targetSdkVersion.apiLevel}"
-        }
-        commandLine dartExecutable, 'run', 'realm', 'metrics', '--flutter-root', flutterRoot, '--target-os-type', 'android', '--target-os-version', targetOsVersion
-    }
-    catch (e) {
-        logger.error "Error running metrics command $e"
-    }
-}
-
 tasks.register("downloadRealmBinaries", Exec) {
     outputs.upToDateWhen { false }
 
@@ -141,4 +120,4 @@ tasks.register("generateRealmConfig", Copy) {
     filter { line -> line.replaceAll('realm_bundle_id', "${bundleId}") }
 }
 
-preBuild.dependsOn runMetrics, downloadRealmBinaries, generateRealmConfig
+preBuild.dependsOn downloadRealmBinaries, generateRealmConfig

@@ -1,16 +1,48 @@
-## vNext (TBD)
-
-### Enhancements
-* None
-
-### Fixed
-* None
+## 20.1.1 (2025-05-12)
 
 ### Compatibility
 * Realm Studio: 15.0.0 or later.
 
 ### Internal
 * Using Core x.y.z.
+
+## 20.1.0 (2025-05-09)
+
+### Enhancements
+* Ignore coverage in generated files. (Issue [#1826](https://github.com/realm/realm-dart/issues/1826))
+* Upgrade min Dart SDK to 3.6.0, update all dependencies to latest stable version, and tighten lower bounds. (Issue [#1825](https://github.com/realm/realm-dart/issues/1825))
+
+### Fixed
+* Update source_gen to latest stable version (^2.0.0). (Issue [#1825](https://github.com/realm/realm-dart/issues/1825))
+
+### Compatibility
+* Realm Studio: 15.0.0 or later.
+
+### Internal
+* Using Core x.y.z.
+
+## 20.0.1 (2025-01-02)
+
+### Fixed
+* For the Android platform, changed compileSdkVersion into 31 from 28 to fix the fatal `android:attr/lStar not found` error when using Flutter 3.24.
+* Fix breakage of `PseudoType` after Flutter 3.27.1. (Issue [#1813](https://github.com/realm/realm-dart/issues/1813))
+
+### Compatibility
+* Realm Studio: 15.0.0 or later.
+
+### Internal
+* Using Core 20.0.1.
+
+## 20.0.0 (2024-09-09)
+
+### Breaking Changes
+* Removed all functionality related to App Services/Atlas Device Sync.
+
+### Compatibility
+* Realm Studio: 15.0.0 or later.
+
+### Internal
+* Using Core 20.0.1.
 
 ## 3.4.2 (2025-01-02)
 
@@ -22,7 +54,7 @@
 * Realm Studio: 15.0.0 or later.
 
 ### Internal
-* Using Core x.y.z.
+* Using Core 14.11.0.
 
 ## 3.4.1 (2024-08-14)
 

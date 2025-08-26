@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'test.dart';
@@ -6,6 +7,7 @@ part of 'test.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class Car extends _Car with RealmEntity, RealmObjectBase, RealmObject {
   Car(
@@ -3481,94 +3483,6 @@ class ObjectWithDecimal extends _ObjectWithDecimal
       SchemaProperty('decimal', RealmPropertyType.decimal128),
       SchemaProperty('nullableDecimal', RealmPropertyType.decimal128,
           optional: true),
-    ]);
-  }();
-
-  @override
-  SchemaObject get objectSchema => RealmObjectBase.getSchema(this) ?? schema;
-}
-
-class Asymmetric extends _Asymmetric
-    with RealmEntity, RealmObjectBase, AsymmetricObject {
-  Asymmetric(
-    ObjectId id, {
-    Symmetric? symmetric,
-    Iterable<Embedded> embeddedObjects = const [],
-  }) {
-    RealmObjectBase.set(this, '_id', id);
-    RealmObjectBase.set(this, 'symmetric', symmetric);
-    RealmObjectBase.set<RealmList<Embedded>>(
-        this, 'embeddedObjects', RealmList<Embedded>(embeddedObjects));
-  }
-
-  Asymmetric._();
-
-  @override
-  ObjectId get id => RealmObjectBase.get<ObjectId>(this, '_id') as ObjectId;
-  @override
-  set id(ObjectId value) => RealmObjectBase.set(this, '_id', value);
-
-  @override
-  Symmetric? get symmetric =>
-      RealmObjectBase.get<Symmetric>(this, 'symmetric') as Symmetric?;
-  @override
-  set symmetric(covariant Symmetric? value) =>
-      RealmObjectBase.set(this, 'symmetric', value);
-
-  @override
-  RealmList<Embedded> get embeddedObjects =>
-      RealmObjectBase.get<Embedded>(this, 'embeddedObjects')
-          as RealmList<Embedded>;
-  @override
-  set embeddedObjects(covariant RealmList<Embedded> value) =>
-      throw RealmUnsupportedSetError();
-
-  @override
-  Stream<RealmObjectChanges<Asymmetric>> get changes =>
-      RealmObjectBase.getChanges<Asymmetric>(this);
-
-  @override
-  Stream<RealmObjectChanges<Asymmetric>> changesFor([List<String>? keyPaths]) =>
-      RealmObjectBase.getChangesFor<Asymmetric>(this, keyPaths);
-
-  @override
-  Asymmetric freeze() => RealmObjectBase.freezeObject<Asymmetric>(this);
-
-  EJsonValue toEJson() {
-    return <String, dynamic>{
-      '_id': id.toEJson(),
-      'symmetric': symmetric.toEJson(),
-      'embeddedObjects': embeddedObjects.toEJson(),
-    };
-  }
-
-  static EJsonValue _toEJson(Asymmetric value) => value.toEJson();
-  static Asymmetric _fromEJson(EJsonValue ejson) {
-    if (ejson is! Map<String, dynamic>) return raiseInvalidEJson(ejson);
-    return switch (ejson) {
-      {
-        '_id': EJsonValue id,
-      } =>
-        Asymmetric(
-          fromEJson(id),
-          symmetric: fromEJson(ejson['symmetric']),
-          embeddedObjects: fromEJson(ejson['embeddedObjects']),
-        ),
-      _ => raiseInvalidEJson(ejson),
-    };
-  }
-
-  static final schema = () {
-    RealmObjectBase.registerFactory(Asymmetric._);
-    register(_toEJson, _fromEJson);
-    return const SchemaObject(
-        ObjectType.asymmetricObject, Asymmetric, 'Asymmetric', [
-      SchemaProperty('id', RealmPropertyType.objectid,
-          mapTo: '_id', primaryKey: true),
-      SchemaProperty('symmetric', RealmPropertyType.object,
-          optional: true, linkTarget: 'Symmetric'),
-      SchemaProperty('embeddedObjects', RealmPropertyType.object,
-          linkTarget: 'Embedded', collectionType: RealmCollectionType.list),
     ]);
   }();
 

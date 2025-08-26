@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'indexed_test.dart';
@@ -6,6 +7,7 @@ part of 'indexed_test.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class WithIndexes extends _WithIndexes
     with RealmEntity, RealmObjectBase, RealmObject {

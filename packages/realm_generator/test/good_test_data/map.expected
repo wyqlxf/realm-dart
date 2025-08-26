@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'map.dart';
@@ -6,6 +7,7 @@ part of 'map.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class LotsOfMaps extends _LotsOfMaps
     with RealmEntity, RealmObjectBase, RealmObject {
@@ -167,7 +169,8 @@ class LotsOfMaps extends _LotsOfMaps
   static final schema = () {
     RealmObjectBase.registerFactory(LotsOfMaps._);
     register(_toEJson, _fromEJson);
-    return const SchemaObject(ObjectType.realmObject, LotsOfMaps, 'LotsOfMaps', [
+    return const SchemaObject(
+        ObjectType.realmObject, LotsOfMaps, 'LotsOfMaps', [
       SchemaProperty('persons', RealmPropertyType.object,
           optional: true,
           linkTarget: 'Person',

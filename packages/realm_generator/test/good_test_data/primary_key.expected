@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'primary_key.dart';
@@ -6,6 +7,7 @@ part of 'primary_key.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class IntPK extends _IntPK with RealmEntity, RealmObjectBase, RealmObject {
   IntPK(
@@ -294,7 +296,8 @@ class ObjectIdPK extends _ObjectIdPK
   static final schema = () {
     RealmObjectBase.registerFactory(ObjectIdPK._);
     register(_toEJson, _fromEJson);
-    return const SchemaObject(ObjectType.realmObject, ObjectIdPK, 'ObjectIdPK', [
+    return const SchemaObject(
+        ObjectType.realmObject, ObjectIdPK, 'ObjectIdPK', [
       SchemaProperty('id', RealmPropertyType.objectid, primaryKey: true),
     ]);
   }();

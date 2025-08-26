@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'binary_type.dart';
@@ -6,6 +7,7 @@ part of 'binary_type.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class Foo extends _Foo with RealmEntity, RealmObjectBase, RealmObject {
   Foo(

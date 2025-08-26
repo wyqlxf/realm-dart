@@ -1,3 +1,4 @@
+// dart format width=80
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'realm_object_test.dart';
@@ -6,6 +7,7 @@ part of 'realm_object_test.dart';
 // RealmObjectGenerator
 // **************************************************************************
 
+// coverage:ignore-file
 // ignore_for_file: type=lint
 class ObjectIdPrimaryKey extends _ObjectIdPrimaryKey
     with RealmEntity, RealmObjectBase, RealmObject {
